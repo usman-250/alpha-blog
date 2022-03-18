@@ -10,7 +10,6 @@ gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -54,8 +53,12 @@ group :development, :test do
 end
 
 group :development do
+  gem "sqlite3", "~> 1.4"
+
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  gem "byebug"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
@@ -69,4 +72,9 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+end
+
+group :production do
+  gem 'pg'
+
 end
