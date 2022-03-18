@@ -1,7 +1,7 @@
-<h1> New Article </h1>
+<h1> Delete Article </h1>
 
 <% if @article.errors.any? %>
-    <h1>Following Errors could not get the article created</h1>
+    <h1>Following Errors could not get the article Deleted</h1>
     <ul>
         <% @article.errors.full_messages.each do |msg| %>
             <li> <%= msg %> </li>
@@ -24,5 +24,3 @@
 </p>
 
 <% end %>
-
-<%= link_to 'Back to listing page', articles_path %>
